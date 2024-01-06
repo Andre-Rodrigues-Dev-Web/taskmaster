@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopoComponent } from './components/topo/topo.component';
-import { SharedServicesModule } from './services/shared-services.module';
 import { MenuModule } from './components/menu/menu.module';
 import { TarefasComponent } from './components/tarefas/tarefas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,15 +12,16 @@ import { TarefasComponent } from './components/tarefas/tarefas.component';
   ],
   imports: [
     CommonModule,
-    MenuModule
+    MenuModule,
+    HttpClientModule
   ],
   providers: [
-    SharedServicesModule
   ],
   exports: [
    TopoComponent,
    MenuModule,
-   TarefasComponent
+   TarefasComponent,
+   HttpClientModule
   ],
 })
 export class SharedModule {}

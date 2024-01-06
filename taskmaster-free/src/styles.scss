@@ -115,6 +115,12 @@ img {
   font-size: 0.75em;
   font-weight: 600;
   padding: 0.56em 1.5em;
+  &-blue{
+    background-color: #3498db;
+  }
+  &-orange{
+    background-color: #e67e22;
+  }
   &-red{
     background-color: crimson;
   }
