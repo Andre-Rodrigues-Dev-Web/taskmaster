@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+// reset.scss
+
+// Box sizing
+* {
+  box-sizing: border-box;
+}
+
+// Remove default margin and padding
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+// Remove list styles
+ul,
+ol {
+  list-style: none;
+}
+
+// Reset heading styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+// Reset form elements
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+// Ensure the cursor style is pointer for clickable elements
+a,
+button {
+  cursor: pointer;
+}
+
+// Ensure images are responsive
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Additional resets or styles can be added based on your specific needs

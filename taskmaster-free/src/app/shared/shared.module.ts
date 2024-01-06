@@ -17,7 +17,8 @@ import { MenuComponent } from './components/menu/menu.component';
     SharedServicesModule
   ],
   exports: [
-   TopoComponent
+   TopoComponent,
+   MenuComponent
   ],
 })
 export class SharedModule {}

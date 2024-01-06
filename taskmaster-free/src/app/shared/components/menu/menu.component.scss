@@ -1,0 +1,19 @@
+.menu{
+  background-color: #2D37BC;
+  &-container{
+    margin: 0 auto;
+    padding: 0.8em;
+    width: 96%;
+    .links{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      column-gap: 1em;
+      li{
+        a{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
