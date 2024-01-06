@@ -16,25 +16,25 @@ const getTarefas = (req, res) => {
       nome: 'Realizar testes de qualidade',
       dataInicio: '03/01/2024',
       dataConclusao: '10/01/2024',
-      status: 'Pausada',
+      status: 'Em andamento',
     },
     {
       nome: 'Revisar código-fonte',
       dataInicio: '04/01/2024',
       dataConclusao: '12/01/2024',
-      status: 'Planejada',
+      status: 'Backlog',
     },
     {
       nome: 'Preparar documentação',
       dataInicio: '05/01/2024',
       dataConclusao: '14/01/2024',
-      status: 'Planejada',
+      status: 'Backlog',
     },
     {
       nome: 'Realizar deploy',
       dataInicio: '06/01/2024',
       dataConclusao: '16/01/2024',
-      status: 'Planejada',
+      status: 'Backlog',
     },
   ];
 

@@ -111,6 +111,7 @@ img {
   -moz-border-radius: 3em;
   -ms-border-radius: 3em;
   -o-border-radius: 3em;
+  color: #fff;
   display: inline-block;
   font-size: 0.75em;
   font-weight: 600;
@@ -123,5 +124,8 @@ img {
   }
   &-red{
     background-color: crimson;
+  }
+  &-dark_blue{
+    background-color: #34495e;
   }
 }
