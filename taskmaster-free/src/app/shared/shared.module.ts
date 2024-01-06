@@ -2,23 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopoComponent } from './components/topo/topo.component';
 import { SharedServicesModule } from './services/shared-services.module';
-import { MenuComponent } from './components/menu/menu.component';
-
+import { MenuModule } from './components/menu/menu.module';
 
 @NgModule({
   declarations: [
-    TopoComponent,
-    MenuComponent
+    TopoComponent
   ],
   imports: [
     CommonModule,
+    MenuModule
   ],
   providers: [
     SharedServicesModule
   ],
   exports: [
    TopoComponent,
-   MenuComponent
+   MenuModule
   ],
 })
 export class SharedModule {}
