@@ -1,8 +1,9 @@
+//Vars
+$desktop: 48em;
 // reset.scss
-
-// Box sizing
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 // Remove default margin and padding
@@ -25,13 +26,11 @@ legend {
   padding: 0;
 }
 
-// Remove list styles
 ul,
 ol {
   list-style: none;
 }
 
-// Reset heading styles
 h1,
 h2,
 h3,
@@ -42,7 +41,6 @@ h6 {
   font-weight: inherit;
 }
 
-// Reset form elements
 button,
 input,
 optgroup,
@@ -51,16 +49,73 @@ textarea {
   margin: 0;
 }
 
-// Ensure the cursor style is pointer for clickable elements
 a,
 button {
   cursor: pointer;
 }
-
-// Ensure images are responsive
 img {
   max-width: 100%;
   height: auto;
 }
 
-// Additional resets or styles can be added based on your specific needs
+//Buttons
+.bt{
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  font-weight: 600;
+  margin-left: .45em;
+  padding: 0.56em 2em;
+  &:first-child{
+    margin: 0;
+  }
+  &-color_clean{
+    color: #fff;
+  }
+  &-danger{
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    &:hover{
+      background-color: #c0392b;
+      border-color: #c0392b;
+    }
+  }
+  &-primary{
+    background-color: #3498db;
+    border-color: #3498db;
+    &:hover{
+      background-color: #2980b9;
+    }
+  }
+  &-success{
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    &:hover{
+      background-color: #27ae60;
+    }
+  }
+  @media(width > $desktop){
+    font-size: 1em;
+  }
+}
+
+//Status
+.status{
+  border-radius: 3em;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  -ms-border-radius: 3em;
+  -o-border-radius: 3em;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 0.56em 1.5em;
+  &-red{
+    background-color: crimson;
+  }
+}

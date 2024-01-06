@@ -1,0 +1,8 @@
+.content{
+  margin: 2em auto;
+  width: 98%;
+  @media(width > 48em){
+    width: 94%;
+  }
+}
+
