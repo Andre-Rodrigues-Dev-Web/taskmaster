@@ -1,0 +1,45 @@
+$desktop: 48em;
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      margin-bottom: 15px;
+      padding: 8px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  .sucesso-mensagem {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745; /* Cor verde de sucesso */
+    color: #fff;
+    border-radius: 4px;
+  }
+  @media(width > $desktop){
+    position: fixed;
+    left: 25em;
+    top: 2em;
+    width: 50%;
+  }
+}

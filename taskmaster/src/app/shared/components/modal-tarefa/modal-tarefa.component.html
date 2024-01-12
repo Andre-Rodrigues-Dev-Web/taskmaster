@@ -1,0 +1,25 @@
+<div class="modal" *ngIf="!sucessoCadastro">
+  <h2>Cadastrar Tarefa</h2>
+  <form (ngSubmit)="cadastrarTarefa()">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" [(ngModel)]="novaTarefa.nome" required>
+
+    <label for="dataInicio">Data de Início:</label>
+    <input type="text" id="dataInicio" name="dataInicio" [(ngModel)]="novaTarefa.dataInicio" required>
+
+    <label for="dataConclusao">Data de Conclusão:</label>
+    <input type="text" id="dataConclusao" name="dataConclusao" [(ngModel)]="novaTarefa.dataConclusao" required>
+
+    <label for="status">Status:</label>
+    <input type="text" id="status" name="status" [(ngModel)]="novaTarefa.status" required>
+
+    <label for="tempoDeExecucao">Tempo de Execução:</label>
+    <input type="text" id="tempoDeExecucao" name="tempoDeExecucao" [(ngModel)]="novaTarefa.tempoDeExecucao" required>
+
+    <button class="bt bt-primary bt-cadastrar" type="submit">Cadastrar</button>
+  </form>
+  <!-- Mensagem de sucesso -->
+  <div *ngIf="sucessoCadastro" class="sucesso-mensagem">
+    Tarefa cadastrada com sucesso!
+  </div>
+</div>

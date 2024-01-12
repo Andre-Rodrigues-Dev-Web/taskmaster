@@ -1,0 +1,43 @@
+<button class="bt bt-primary bt-cadastrar" (click)="abrirModal()">Cadastrar tarefa</button>
+<app-modal-tarefa *ngIf="modalAberto" (fecharModal)="fecharModal()"></app-modal-tarefa>
+<div class="card-tarefas">
+  <div class="card-tarefas_header">
+    <h2>Tarefas da semana</h2>
+  </div>
+  <div class="card-tarefas_body">
+    <div class="filtro">
+      <label for="status">Filtre pelo status</label>
+      <select name="status" id="status" [(ngModel)]="statusSelecionado">
+        <option value="" disabled selected>Selecione o status</option>
+        <option value="" selected>Listar todos</option>
+        <option *ngFor="let status of statusList" [value]="status">{{ status }}</option>
+      </select>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tarefa</th>
+          <th>Data de início</th>
+          <th>Data de conclusão</th>
+          <th>Status atual</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tarefa of tarefas | filterByStatus: statusSelecionado">
+          <td>{{ tarefa.nome }}</td>
+          <td>{{ tarefa.dataInicio }}</td>
+          <td>{{ tarefa.dataConclusao }}</td>
+          <td>
+            <span class="status" [ngClass]="getStatus(tarefa.status)">{{ tarefa.status }}</span>
+          </td>
+          <td>
+            <button class="bt bt-color_clean bt-success">Concluir</button>
+            <button class="bt bt-color_clean bt-primary">Editar</button>
+            <button class="bt bt-color_clean bt-danger">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

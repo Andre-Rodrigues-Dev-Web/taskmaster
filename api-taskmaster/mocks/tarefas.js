@@ -1,46 +1,40 @@
-const getTarefas = (req, res) => {
-  const tarefas = [
-    {
-      nome: 'Desenvolvimento de software de gestão',
-      dataInicio: '01/01/2024',
-      dataConclusao: '06/01/2024',
-      status: 'Em andamento',
-    },
-    {
-      nome: 'Implementar novas funcionalidades',
-      dataInicio: '02/01/2024',
-      dataConclusao: '08/01/2024',
-      status: 'Em andamento',
-    },
-    {
-      nome: 'Realizar testes de qualidade',
-      dataInicio: '03/01/2024',
-      dataConclusao: '10/01/2024',
-      status: 'Em andamento',
-    },
-    {
-      nome: 'Revisar código-fonte',
-      dataInicio: '04/01/2024',
-      dataConclusao: '12/01/2024',
-      status: 'Backlog',
-    },
-    {
-      nome: 'Preparar documentação',
-      dataInicio: '05/01/2024',
-      dataConclusao: '14/01/2024',
-      status: 'Backlog',
-    },
-    {
-      nome: 'Realizar deploy',
-      dataInicio: '06/01/2024',
-      dataConclusao: '16/01/2024',
-      status: 'Backlog',
-    },
-  ];
+// tarefas.js
+const tarefas = [
+  {
+    nome: 'Desenvolvimento de software de gestão',
+    dataInicio: '01/01/2024',
+    dataConclusao: '06/01/2024',
+    status: 'Em andamento',
+    tempoDeExecucao: '5 horas',
+  },
+  {
+    nome: 'Revisão de código',
+    dataInicio: '10/01/2024',
+    dataConclusao: '15/01/2024',
+    status: 'Concluida',
+    tempoDeExecucao: '8 horas',
+  },
+  {
+    nome: 'Testes de integração',
+    dataInicio: '20/01/2024',
+    dataConclusao: '25/01/2024',
+    status: 'Pausada',
+    tempoDeExecucao: '3 horas',
+  },
+  {
+    nome: 'Planejamento de sprint',
+    dataInicio: '01/02/2024',
+    dataConclusao: '10/02/2024',
+    status: 'Backlog',
+    tempoDeExecucao: '0 horas',
+  },
+];
 
+const getTarefas = (req, res) => {
   res.json(tarefas);
 };
 
 module.exports = {
+  tarefas,
   getTarefas,
 };
